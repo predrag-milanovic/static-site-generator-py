@@ -7,9 +7,12 @@ This project is a lightweight Python static site generator (SSG) that transforms
 To serve the contents of the public directory change directories to the public directory and use Python's built-in [HTTP server](https://docs.python.org/3/library/http.server.html#command-line-interface):
 
 ```bash
-cd public
-python3 -m http.server 8888 &
+cd public                       
+python3 -m http.server 8888 &   
 ```
+
+The `&` detaches the process to the background.
+Run `fg` to brig it back, then `Ctrl+C`. 
 
 ## Features
 
