@@ -1,5 +1,5 @@
 import unittest
-from htmlnode import HTMLNode
+from htmlnode import HTMLNode, LeafNode
 
 
 class TestHTMLNode(unittest.TestCase):
@@ -39,6 +39,21 @@ class TestHTMLNode(unittest.TestCase):
             repr(node),
             "HTMLNode(tag=div, value=Main content section, children=None, props={'class': 'container', 'id': 'main-content'})",
         )
+
+    def test_leaf_to_html_p(self):
+        # Tests LeafNode HTML rendering (paragraph)
+        node = LeafNode("p", "Hello, world!")
+        self.assertEqual(node.to_html(), "<p>Hello, world!</p>")
+
+    def test_leaf_to_html_a(self):
+        # Tests LeafNode HTML rendering (anchor with attributes)
+        node = LeafNode("a", "Click me!", {"href": "https://www.google.com"})
+        self.assertEqual(node.to_html(), '<a href="https://www.google.com">Click me!</a>',)
+
+    def test_leaf_to_html_no_tag(self):
+        # Tests LeafNode raw text rendering (no tag)
+        node = LeafNode(None, "Hello, world!")
+        self.assertEqual(node.to_html(), "Hello, world!")
 
 
 if __name__ == "__main__":
