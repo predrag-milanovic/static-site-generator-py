@@ -28,3 +28,6 @@ A quick reference for all the HTML and Markdown syntax you'll need for a project
 
 - [HTML Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements)
 - [MarkdowGuide.org](https://www.markdownguide.org/cheat-sheet/)
+
+To get really good at using regex, use [regexr](regexr.com) for interactive regex testing.
+It breaks down each part of the pattern and explains what it does.
