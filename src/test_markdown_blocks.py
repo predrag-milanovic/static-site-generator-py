@@ -152,7 +152,7 @@ this is paragraph text
             "<div><blockquote>This is a blockquote block</blockquote><p>this is paragraph text</p></div>",
         )
 
-    def test_code(self):
+    def test_codeblock(self):
         # Tests code block preservation (no inline processing)
         md = """
 ```
